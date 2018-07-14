@@ -1,0 +1,110 @@
+/**{box-sizing: border-box;}*/
+    	/*#header{display: grid;
+  				grid-template-columns: auto auto auto;}*/
+    	body{margin: auto;
+    			background-color: yellow;}
+
+    	.headerTopic{ font-family: monospace,Courier, monospace, Helvetica, sans-serif, serif;
+    					
+    					background-color: #BB8FCE;
+    					/*margin-top: inherit;*/
+    					padding-top: 0.1px; }
+    	.headerTopic, #copright {text-align: center;}
+
+    	content {	display: flex;
+					margin: 3px 10px 10px 3px;
+					/*justify-content: center;*/
+					 flex-wrap: row wrap;	}
+
+		.backGroundImage {background-image: url("images/background.jpg");
+							background-repeat: repeat;}
+
+    	.pText{width: 620px;}
+    	.backGroundImage, .pText{ 
+				    			/*text-indent: 100px;*/
+				    			/*margin: 50px 10px 10px 100px;*/
+				    			padding-bottom: 200px;} 
+
+    div.col-xs-1 > div.backGroundImage, .pText, div > ul.menuButton{margin-left: 6px;
+    		/*<div class="row">
+			<div class="col-xs-1 col-sm-2 col-lg-2">
+				<div class = "backGroundImage" >
+*/
+    													margin: 10px;}
+
+    	ul.menuButton li {display: inline;
+    						background-color: #F4ECF7;} 
+
+		ul > li:hover {background-color: #F1C40F/*#290*/;}
+
+				
+    	.footNote{ text-align: center;
+    					font-size: smaller;
+    					font-weight: bold;
+    					text-transform: capitalize;
+    					 }
+    	nav.footerImage + nav {padding: 8px 20px 1px 20px;}
+
+		.mastfoot {
+		    position: static;
+		    bottom: 0;
+		    width: 100%;
+		  }
+
+
+    	.footerImage{	padding: 1px 100px 1px 50px;
+						font: bold 20px sans-serif;
+				   		/* background: #f5d8f4;*/	
+						border: 2px solid orchid;
+						-webkit-animation: target 4s infinite; 
+						animation: target 6s infinite; }
+				
+		@keyframes target {
+				    		10% {border: 5px solid indigo;}
+									}
+
+	.advert >nav {  width: 100px;
+				    height: auto;
+				    background-color: #F4ECF7;
+				    font-weight: bold;
+				    position: relative;
+				    animation: mymove 5s infinite;}
+				    
+   	.advert{padding-top: 70px;}
+
+	#nava {animation-timing-function: linear;}
+	#navb {animation-timing-function: ease;}
+	#navc {animation-timing-function: ease-in;}
+	#navd {animation-timing-function: ease-out;}
+	#nave {animation-timing-function: ease-in-out;}
+
+			@keyframes mymove {
+							    from {left: 0px;}
+							    to {left: 300px;}
+								}
+
+	/* CUSTOMIZE THE gallery page
+-------------------------------------------------- */
+.galleryPage, .carousel { margin: 10px;
+			   padding: 20px
+
+			}
+
+.galleryPage > div.carousel > div.carousel-inner
+					{ 	padding: 30px;
+						 
+					}
+.carousel {
+  height: auto;
+  margin-bottom: 60px;}
+
+.galleryPage>div.carousel>div.carousel-inner>div.carousel-item > img
+	{position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 500px;}
+
+ .galleryPage > div.carousel>div.carousel-inner>div.carousel-item
+  {height: 500px;
+  background-color: #777;}
