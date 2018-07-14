@@ -90,25 +90,26 @@
 
 			}
 
-.galleryPage > div.carousel > div.carousel-inner
-					{ 	padding: 30px;
-						 
-					}
-.carousel {
-  height: auto;
-  margin-bottom: 60px;}
+.carousel-inner {
+  height: 500px;
+  margin-bottom: 60px;
+padding: 2px 200px 2px 200px;
+background-color: #5a4c59; }
 
 .galleryPage>div.carousel>div.carousel-inner>div.carousel-item > img
 	{position: absolute;
   top: 0;
   left: 0;
   min-width: 100%;
-  height: 500px;}
+  height: 100%;
+padding-bottom: 10px;}
 
  .galleryPage > div.carousel>div.carousel-inner>div.carousel-item
   {height: 500px;
   background-color: #777;}
 
 	/*contact list format*/
-  .noFormat:hover{ background-color:none }
-  #contact{padding-top: 30px;}
+  /*.noFormat:hover{ background-color:none }*/
+  form.needs-validation {padding:20px 100px 20px 100px;}
+
+ 
