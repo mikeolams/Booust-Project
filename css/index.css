@@ -1,31 +1,33 @@
 /**{box-sizing: border-box;}*/
     	/*#header{display: grid;
   				grid-template-columns: auto auto auto;}*/
-    	body{margin: auto;
-    			background-color: yellow;}
+    	/*body{margin: auto;
+    			background-color: yellow;}*/
 
-    	.headerTopic{ font-family: monospace,Courier, monospace, Helvetica, sans-serif, serif;
+    	.headerTopic{ font-family: algerian, courier, monospace, monospace, Helvetica, sans-serif, serif;
     					
     					background-color: #BB8FCE;
     					/*margin-top: inherit;*/
     					padding-top: 0.1px; }
     	.headerTopic, #copright {text-align: center;}
 
-    	content {	display: flex;
-					margin: 3px 10px 10px 3px;
-					/*justify-content: center;*/
-					 flex-wrap: row wrap;	}
+/*.headerTopic { width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;}*/
 
-		.backGroundImage {background-image: url("images/background.jpg");
-							background-repeat: repeat;}
+
+    	content {	margin: 0 10px 10px 3px;}
+
+		/*.backGroundImage {background-image: url("images/background.jpg");
+							background-repeat: repeat;}*/
 
     	.pText{width: 620px;}
-    	.backGroundImage, .pText{ 
-				    			/*text-indent: 100px;*/
-				    			/*margin: 50px 10px 10px 100px;*/
-				    			padding-bottom: 200px;} 
+    	 .pText{ /*text-indent: 100px;*/
+				   /*margin: 50px 10px 10px 100px;*/
+				    padding-bottom: 200px;} 
 
-    div.col-xs-1 > div.backGroundImage, .pText, div > ul.menuButton{margin-left: 6px;
+    div.col-xs-1 > div.imagebackground, .pText, div > ul.menuButton{margin-left: 6px;
     		/*<div class="row">
 			<div class="col-xs-1 col-sm-2 col-lg-2">
 				<div class = "backGroundImage" >
@@ -63,14 +65,26 @@
 				    		10% {border: 5px solid indigo;}
 									}
 
-	.advert >nav {  width: 100px;
-				    height: auto;
+.adverthead >nav {  width: 30%;
+					font-size: 100%;
+				    background-color: #Ffff;
+				    font-style: italic;
+				    }
+.advert >nav {  width:200px;
 				    background-color: #F4ECF7;
+				    }
+				    
+   	.adverthead {padding-top: 1px; color: yellow;}
+   	.advert{padding-top: 70px;}
+	
+
+	.adverthead, .advert >nav { 
+				    height: auto;
 				    font-weight: bold;
 				    position: relative;
 				    animation: mymove 5s infinite;}
 				    
-   	.advert{padding-top: 70px;}
+   	
 
 	#nava {animation-timing-function: linear;}
 	#navb {animation-timing-function: ease;}
@@ -79,9 +93,13 @@
 	#nave {animation-timing-function: ease-in-out;}
 
 			@keyframes mymove {
-							    from {left: 0px;}
-							    to {left: 300px;}
+							    from {left:10%;}
+							    to {left: 80%;}
 								}
+	/*.adverthead{ animation: mymove 5s infinite;}
+
+	@keyframes mymovetwo {
+    50% {font: 40px bold;}*/
 
 	/* CUSTOMIZE THE gallery page
 -------------------------------------------------- */
@@ -111,5 +129,33 @@ padding-bottom: 10px;}
 	/*contact list format*/
   /*.noFormat:hover{ background-color:none }*/
   form.needs-validation {padding:20px 100px 20px 100px;}
+  .formBack{background-color: white;}
+  .welcome{ font-weight: 900px }
+
+	/* CUSTOMIZE THE carosel on index page
+-------------------------------------------------- */
+ .carouselIndex { margin: 10px;
+			   padding: 20px
+
+			}
+
+.containerBackground {
+    height: 500px;
+  margin-bottom: 2px;
+padding: 2px 200px 2px 200px;
+background-color: #bf9413; }
+.backgroundcontent{display: flex;}
+
+
+ div.carouselIndex>div.carousel-innerIndex>div.carousel-itemIndex
+  {height: 100px;
+  background-color: #777;}
+
+
+  .imagebackground {
+  height: 100%;
+  margin: 6px;
+padding: 50%;
+background-color: #bf9413;
 
  
