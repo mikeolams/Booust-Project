@@ -24,7 +24,7 @@ $count =0;
  function isLeapYear($year)
 {
 	$isLeapYear = false;
-	if((($year%4)==0 && ($year%100)<>0)||($year % 400)==0)
+	if((($year%4)==0 and ($year%100)<>0)or($year % 400)==0)
 		$isLeapYear =true;
 	return $isLeapYear;
 }
