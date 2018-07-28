@@ -82,36 +82,36 @@
         <div class="col-md-4 mb-3">
           <label for="validationTooltip01">First name</label>
           <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
+          <div id="status01" class ="form-text flag-error"></div>
           <div class="valid-tooltip">
             Looks good!
           </div>
-          <div id="status01"></div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="validationTooltip02">Last name</label>
           <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
+          <div id="status02" class ="form-text flag-error"></div>
           <div class="valid-tooltip">
             Looks good!
           </div>
-          <div id="status02"></div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="validationTooltip02">Email address</label>
           <input type="text" class="form-control" id="validationTooltip03" placeholder="Last name" value="name@domain.com" required>
+          <div id="status03" class ="form-text flag-error"></div>
           <div class="valid-tooltip">
             Looks good!
           </div>
-          <div id="status03"></div>
         </div>
     </div>
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationTooltip03">City</label>
           <input type="text" class="form-control" id="validationTooltip04" placeholder="City" required>
+          <div id="status04" class ="form-text flag-error"></div>
           <div class="invalid-tooltip">
             Please provide a valid city.
           </div>
-          <div id="status04"></div>
         </div>
         <div class="col-md-3 mb-3">
           <label for="validationTooltip04">State</label>
@@ -119,7 +119,7 @@
           <div class="invalid-tooltip">
             Please provide a valid state.
           </div>
-          <div id="status05"></div>
+          <div id="status05" class ="form-text flag-error"></div>
         </div>
         <div class="col-md-3 mb-3">
           <label for="validationTooltip05">Movie Title</label>
@@ -129,7 +129,7 @@
           </div>
         </div>
       </div>
-      <button id="submitForm" class="btn btn-primary" type="submit">Submit form</button>
+      <button id="submitForm" class="btn btn-primary" type="submit1">Submit form</button>
     </form>
     </div>
     <div class="carousel-inner">
@@ -187,14 +187,14 @@
             if (lastName===""){$("#status02").text("Please provide your last name");}
                 else{$("#status02").text("looks good");}
 
-            if (email===undefined){$("#status03").text("Please provide your e-mail address");}
-                else{$("#status03").text("looks good");}
+            if (email===""){$("#status03").text("Please provide your e-mail address");}
+                else{$("#status03").text();}
 
             if (city===""){$("#status04").text("Please provide your city name");}
                 else{$("#status04").text("looks good");}
 
-            if (state ===undefined){$("#status05").text("Please provide your state name");}
-                else{$("#status05").text("looks good");}
+            if (state ===null){$("#status05").text("Please provide your state name");}
+                else{$("#status05").text();}
 
                 });
 
