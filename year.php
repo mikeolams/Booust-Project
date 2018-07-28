@@ -24,7 +24,7 @@ $count =0;
  function isLeapYear($year)
 {
 	$isLeapYear = false;
-	if((($year%4)==0 && ($year%100)!=0)||($year % 400)==0)
+	if((($year%4)==0 && ($year%100)<>0)||($year % 400)==0)
 		$isLeapYear =true;
 	return $isLeapYear;
 }
@@ -34,14 +34,14 @@ $count =0;
 
 while ( $year<= $stopYear) {
 	if (isLeapYear($year)) {
-		$count = $count + 1;
+		$count += 1;
 		echo $year ."Leap Year" . '<br>';
 	}
 		else
 			echo $year .'<br>';
 
 		//Increament year to go to the next year
-		$year = $year + 1;
+		$year += 1;
 }
 
 // print the count number of leap years
