@@ -12,6 +12,8 @@
 
      <link href="css/bootstrap.css" rel="stylesheet">
 </head>
+<?php ?>
+
 <body>
 	<header>
 		<div class = "headerTopic"><h1>The Flame FILM Rentals</h1><span><img width="50px" height="50px" src="images/imagesLogo.jpg"></span>
