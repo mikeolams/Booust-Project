@@ -29,27 +29,27 @@
 		        <a class="nav-link" href="#welcome">Home <span class="sr-only">(current)</span></a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="movies.html">Available Movies</a>
+		        <a class="nav-link" href="movies.php">Available Movies</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="gallery.html">Gallery</a>
+		        <a class="nav-link" href="gallery.php">Gallery</a>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="careers.html">Careers</a>
+		        <a class="nav-link" href="careers.php">Careers</a>
 		      </li>
 		      <li class="nav-item dropdown">
 		        <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 		          Services
 		        </a>
 		        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-		          <a class="dropdown-item" href="gallery.html">Cinema Show</a>
-		          <a class="dropdown-item" href="index.html">Film Rentals</a>
+		          <a class="dropdown-item" href="gallery.php">Cinema Show</a>
+		          <a class="dropdown-item" href="index.php">Film Rentals</a>
 		          <div class="dropdown-divider"></div>
-		          <a class="dropdown-item" href="contact.html">Other Services</a>
+		          <a class="dropdown-item" href="contact.php">Other Services</a>
 		        </ul>
 		      </li>
 		      <li class="nav-item">
-		        <a class="nav-link" href="contact.html">Contact Us</a>
+		        <a class="nav-link" href="contact.php">Contact Us</a>
 		      </li>
 		    </ul>
 		    <form id="form" class="form-inline my-2 my-lg-0">
