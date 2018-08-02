@@ -23,7 +23,7 @@
   <p class="lead">These movies are display in the gallery and they are currently showing in the cinema.</p>
   <hr class="my-4">
   <p>Therefore calling your extra attention to featured content or information. View each of the information below.</p>
-  <a class="btn btn-primary btn-lg" href="gallery.html" role="button">View all</a>
+  <a class="btn btn-primary btn-lg" href="gallery.php" role="button">View all</a>
 </div>
 <script type="text/javascript" src = js/jquery.js></script>
 <script type="text/javascript" src = js/bootstrap.js></script>
