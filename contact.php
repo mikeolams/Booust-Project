@@ -41,7 +41,20 @@
   <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@getbootstrap">Send us an email</button>
 </div>
 
+<!-- php simple if and else statement  -->
 
+<?php if (isset($_POST['name']) && isset($_POST['your-email']) && isset($_POST['message-text'])):  ?>
+
+<?php
+    // IMPORT CLASS HERE
+include "class/SendUsEmail.php";
+
+// EXECUTE WITH THE CUSTOM STATIC FUNCTION
+SendUsEmail::processMail($_POST);
+
+?>
+
+<?php else:?>
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -52,30 +65,36 @@
         </button>
       </div>
       <div class="modal-body">
-        <form>
+        <form action="info.php" method="POST">
           <div class="form-group">
             <label for="validationTooltip04" >Recipient email:</label>
             <input type="text" class="form-control" value="info@flamefilmes.com" id="recipient-name" required>
               <div id ="messageR"></div>
           </div>
           <div class="form-group">
-            <label for="sender-name" class="col-form-label">Your email:</label>
-            <input type="text" class="form-control" placeholder="something@yourdomain" id="sender-name" required>
+            <label for="name" class="col-form-label">Your Name:</label>
+            <input type="text" class="form-control" name="name" placeholder="Full Name" id="name" required>
+             <!-- <div id ="messageY"></div> -->
+          </div>
+          <div class="form-group">
+            <label for="your-email" class="col-form-label">Your email:</label>
+            <input type="text" class="form-control" name="your-email" placeholder="something@yourdomain" id="your-email" required>
              <div id ="messageY"></div>
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" id="message-text" placeholder="Your message.."></textarea>
+            <textarea class="form-control" name="message-text" id="message-text" placeholder="Your message.."></textarea>
+          </div>
+          <div class="modal-footer">
+            <!-- <input type="submit" value ="Submit"> -->
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="submit" id ="sendButton" class="btn btn-primary">Send message<!-- <a href="" class="btn btn-primary btn-lg active" role="button" aria-pressed="true"></a> --></button>
           </div>
         </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" id ="sendButton" class="btn btn-primary"><a href="" class="btn btn-primary btn-lg active" role="button" aria-pressed="false">Send message</a></button>
-      </div>
     </div>
   </div>
-</div>
+
+<?php endif;?>
 
 <script type="text/javascript" src = js/jquery.js></script>
 <script type="text/javascript" src = js/bootstrap.js></script>

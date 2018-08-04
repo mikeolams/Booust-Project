@@ -18,12 +18,13 @@
     <li class="breadcrumb-item active" aria-current="page">Gallery</li>
   </ol>
 </nav>
-<div class ="galleryPage">
+<section class ="galleryPage">
     <div class ="welcome">
       <h1>Welcome!</h1>
     <h6>You are in our gallery! View the available movie and you can make a request. Below this preview is a request form for you!</h6>
   </div>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <main id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div>
       <ol class="carousel-indicators">
         <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
         <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -76,62 +77,34 @@
   </a>
 </div>
     </div>
-    <div class ="formBack"><h3>Make your request.</h3>
-    <form class="needs-validation" novalidate>
+    </div>
+    <div class ="formBack"><h3>Requirements to make your request.</h3>
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="validationTooltip01">First name</label>
-          <input type="text" class="form-control" id="validationTooltip01" placeholder="First name" value="Mark" required>
-          <div id="status01" class ="form-text flag-error"></div>
-          <div class="valid-tooltip">
-            Looks good!
-          </div>
+                    <div id="status01" class ="form-text flag-error"></div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="validationTooltip02">Last name</label>
-          <input type="text" class="form-control" id="validationTooltip02" placeholder="Last name" value="Otto" required>
-          <div id="status02" class ="form-text flag-error"></div>
-          <div class="valid-tooltip">
-            Looks good!
-          </div>
         </div>
         <div class="col-md-4 mb-3">
           <label for="validationTooltip02">Email address</label>
-          <input type="text" class="form-control" id="validationTooltip03" placeholder="Last name" value="name@domain.com" required>
-          <div id="status03" class ="form-text flag-error"></div>
-          <div class="valid-tooltip">
-            Looks good!
-          </div>
         </div>
-    </div>
+      </div>
       <div class="form-row">
         <div class="col-md-6 mb-3">
           <label for="validationTooltip03">City</label>
-          <input type="text" class="form-control" id="validationTooltip04" placeholder="City" required>
-          <div id="status04" class ="form-text flag-error"></div>
-          <div class="invalid-tooltip">
-            Please provide a valid city.
-          </div>
         </div>
         <div class="col-md-3 mb-3">
           <label for="validationTooltip04">State</label>
-          <input type="text" class="form-control" id="validationTooltip05" placeholder="State" required>
-          <div class="invalid-tooltip">
-            Please provide a valid state.
-          </div>
           <div id="status05" class ="form-text flag-error"></div>
         </div>
         <div class="col-md-3 mb-3">
           <label for="validationTooltip05">Movie Title</label>
-          <input type="text" class="form-control" id="validationTooltip06" placeholder="movieTitle" required>
-          <div class="invalid-tooltip">
-            Please provide a valid Movie title.
-          </div>
         </div>
       </div>
-      <button id="submitForm" class="btn btn-primary" type="submit1">Submit form</button>
-    </form>
     </div>
+
     <div class="carousel-inner">
         <div class="carousel-item active">
           <img class="d-block w-100" src="images/g1.jpg" alt="First slide">
@@ -166,8 +139,89 @@
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
-    </div>
+</section>
+</main>
+  <!-- php simple if and else statement  -->
+
+<?php if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['state']) && isset($_POST['movieTitle'])):  ?>
+
+<?php
+    // IMPORT CLASS HERE
+include "class/Request.php";
+
+// EXECUTE WITH THE CUSTOM STATIC FUNCTION
+Request::process($_POST);
+
+?>
+
+<div class="formBack" align="center">
+  <h1>Thank you for reaching out to us!</h1>
+  <p>An email has been sent to your email address you supplied.</p>
+  <br>
+  <a href="">Return to page</a>
 </div>
+
+<?php else:?>
+
+    <div class ="formBack"><h3>Make your request.</h3>
+    <form action="#formMessage" method="POST" class="needs-validation" novalidate>
+      <div class="form-row">
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltip01">First name</label>
+          <input type="text"  name= "firstName" class="form-control" id="validationTooltip01" placeholder="First name" value="" required>
+          <div id="status01" class ="form-text flag-error"></div>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltip02">Last name</label>
+          <input type="text" name= "lastName" class="form-control" id="validationTooltip02" placeholder="Last name" value="" required>
+          <div id="status02" class ="form-text flag-error"></div>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+        <div class="col-md-4 mb-3">
+          <label for="validationTooltip02">Email address</label>
+          <input type="text" name= "email" class="form-control" id="validationTooltip03" placeholder="email" value="name@domain.com" required>
+          <div id="status03" class ="form-text flag-error"></div>
+          <div class="valid-tooltip">
+            Looks good!
+          </div>
+        </div>
+    </div>
+      <div class="form-row">
+        <div class="col-md-6 mb-3">
+          <label for="validationTooltip03">City</label>
+          <input type="text" class="form-control" id="validationTooltip04" placeholder="City" required>
+          <div id="status04" class ="form-text flag-error"></div>
+          <div class="invalid-tooltip">
+            Please provide a valid city.
+          </div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationTooltip04">State</label>
+          <input type="text" name= "state" class="form-control" id="validationTooltip05" placeholder="State" required>
+          <div class="invalid-tooltip">
+            Please provide a valid state.
+          </div>
+          <div id="status05" class ="form-text flag-error"></div>
+        </div>
+        <div class="col-md-3 mb-3">
+          <label for="validationTooltip05">Movie Title</label>
+          <input type="text" name= "movieTitle" class="form-control" id="validationTooltip06" placeholder="movieTitle" required>
+          <div class="invalid-tooltip">
+            Please provide a valid Movie title.
+          </div>
+        </div>
+      </div>
+      <button id="submitForm" class="btn btn-primary" type="submit">Submit form</button>
+    </form>
+    </div>
+
+    <?php endif;?>
+
 <script type="text/javascript" src = js/jquery.js></script>
 <script type="text/javascript" src = js/bootstrap.js></script>
 <script type="text/javascript">
