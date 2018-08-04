@@ -164,7 +164,7 @@ Request::process($_POST);
 </main>
  
     <div class ="formBack"><h3>Make your request.</h3>
-    <form action="#formBack" method="POST" class="needs-validation">
+    <form action="gallery.php" method="POST" class="needs-validation">
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="validationTooltip01">First name</label>

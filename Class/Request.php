@@ -10,7 +10,7 @@ class Request
 		# code...
 		date_default_timezone_set("African/Lagos");
 		// Open or Create contact.csv if not available
-		$file = fopen("Request-Form.csv", "a");
+		$file = fopen("RequestForm.csv", "a");
 
 		// Create csv columns once
 		// fputcsv($file, $arrayName = array('' => , ); fields)
@@ -32,7 +32,7 @@ class Request
 		mail($parem['email'],"Booust Movie request",$message,$headers);
 
 		// access Information from CSV file
-		$csv = array_map("str_getcsv", file(contact.csv));
+		$csv = array_map("str_getcsv", file(RequestForm.csv));
 		echo $csv[sizeof($csv)-1][0] . '<br>';
 		echo $csv[sizeof($csv)-1][1] . '<br>';
 		echo $csv[sizeof($csv)-1][2] . '<br>';
