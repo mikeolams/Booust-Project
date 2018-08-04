@@ -23,7 +23,7 @@ class SendUsEmail
 		fclose($file);
 
 		// Email message to be sent to submitted request
-		$message = "Hello".$parem['name'].',\n\nThank you for contacting us.\n\nRegards';
+		$message = "Hello" .$parem['name'].',\n\n Thank you for contacting us. \n\n Regards';
 		$headers = "Reply-To: Movie Admin <md@flamerentals.com>\r\n";
 		$headers .= "Return-Path:Movie Admin <md@flamerentals.com>\r\n";
 		$headers .= "From: Movie Admin <md@flamerentals.com>\r\n";

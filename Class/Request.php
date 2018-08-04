@@ -12,9 +12,9 @@ class Request
 		// Open or Create contact.csv if not available
 		$file = fopen("RequestForm.csv", "a");
 
-		// Create csv columns once
+		// Create csv columns (RUN THIS ONCE)
 		// fputcsv($file, $arrayName = array('' => , ); fields)
-		fputcsv($file, array('First Name',"Last Name", "Email", "State", "Movie Title", "Date"));
+		fputcsv($file, array('First Name',"Last Name", "Email","State","Movie Title","Date"));
 
 		// Add Contact details to csv file
 		fputcsv($file,array($parem['firstName'],$parem["lastName"],$parem["email"],$parem["state"],$parem["movieTitle"],date('Y-m-d h:i:sa')));
@@ -23,7 +23,7 @@ class Request
 		fclose($file);
 
 		// Email message to be sent to submitted request
-		$message = "Hello".$parem['firstName'].',\n\nThank you for contacting us.\n\nRegards';
+		$message = "Hello" .$parem['name'].',\n\n Thank you for contacting us. \n\n Regards';
 		$headers = "Reply-To: Movie Admin <md@flamerentals.com>\r\n";
 		$headers .= "Return-Path:Movie Admin <md@flamerentals.com>\r\n";
 		$headers .= "From: Movie Admin <md@flamerentals.com>\r\n";
