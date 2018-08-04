@@ -21,8 +21,29 @@
 <section class ="galleryPage">
     <div class ="welcome">
       <h1>Welcome!</h1>
-    <h6>You are in our gallery! View the available movie and you can make a request. Below this preview is a request form for you!</h6>
+    <h6>You are in our gallery! View the available movie and you can make a request. Below this page is a request form for you!</h6>
   </div>
+   <!-- php simple if and else statement  -->
+
+<?php if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['state']) && isset($_POST['movieTitle'])):  ?>
+
+<?php
+    // IMPORT CLASS HERE
+include "class/Request.php";
+
+// EXECUTE WITH THE CUSTOM STATIC FUNCTION
+Request::process($_POST);
+
+?>
+
+<div class="formBack" align="center">
+  <h1>Thank you for making a request for your favourite movie!</h1>
+  <p>An email has been sent to the email address you supplied.</p>
+  <br>
+  <a href="">Return to page</a>
+</div>
+
+<?php else:?>
   <main id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div>
       <ol class="carousel-indicators">
@@ -141,30 +162,9 @@
       </a>
 </section>
 </main>
-  <!-- php simple if and else statement  -->
-
-<?php if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['state']) && isset($_POST['movieTitle'])):  ?>
-
-<?php
-    // IMPORT CLASS HERE
-include "class/Request.php";
-
-// EXECUTE WITH THE CUSTOM STATIC FUNCTION
-Request::process($_POST);
-
-?>
-
-<div class="formBack" align="center">
-  <h1>Thank you for reaching out to us!</h1>
-  <p>An email has been sent to your email address you supplied.</p>
-  <br>
-  <a href="">Return to page</a>
-</div>
-
-<?php else:?>
-
+ 
     <div class ="formBack"><h3>Make your request.</h3>
-    <form action="#formMessage" method="POST" class="needs-validation" novalidate>
+    <form action="#formBack" method="POST" class="needs-validation">
       <div class="form-row">
         <div class="col-md-4 mb-3">
           <label for="validationTooltip01">First name</label>
@@ -184,7 +184,7 @@ Request::process($_POST);
         </div>
         <div class="col-md-4 mb-3">
           <label for="validationTooltip02">Email address</label>
-          <input type="text" name= "email" class="form-control" id="validationTooltip03" placeholder="email" value="name@domain.com" required>
+          <input type="text" name= "email" class="form-control" id="validationTooltip03" placeholder="name@domain.com" value="" required>
           <div id="status03" class ="form-text flag-error"></div>
           <div class="valid-tooltip">
             Looks good!
@@ -210,7 +210,7 @@ Request::process($_POST);
         </div>
         <div class="col-md-3 mb-3">
           <label for="validationTooltip05">Movie Title</label>
-          <input type="text" name= "movieTitle" class="form-control" id="validationTooltip06" placeholder="movieTitle" required>
+          <input type="text" name= "movieTitle" class="form-control" id="validationTooltip06" value ="" placeholder="movieTitle" required>
           <div class="invalid-tooltip">
             Please provide a valid Movie title.
           </div>
@@ -241,8 +241,8 @@ Request::process($_POST);
             if (lastName===""){$("#status02").text("Please provide your last name");}
                 else{$("#status02").text("looks good");}
 
-            if (email===""){$("#status03").text("Please provide your e-mail address");}
-                else{$("#status03").text();}
+            if (email!=""){$("#status03").text("");}
+                else{$("#status03").text("Please provide your e-mail address");}
 
             if (city===""){$("#status04").text("Please provide your city name");}
                 else{$("#status04").text("looks good");}
