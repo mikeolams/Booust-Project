@@ -65,7 +65,7 @@ SendUsEmail::processone($_POST);
         </button>
       </div>
       <div class="modal-body">
-        <form action="contact.php" method="POST">
+        <form action="info.php" method="POST">
           <div class="form-group">
             <label for="validationTooltip04" ></label>
             <input type="text" hidden class="form-control" value="info@flamefilmes.com" id="recipient-name" required>
