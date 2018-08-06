@@ -40,7 +40,7 @@ Request::process($_POST);
   <h1>Thank you for making a request for your favourite movie!</h1>
   <p>An email has been sent to the email address you supplied.</p>
   <br>
-  <a href="">Return to page</a>
+  <a href="gallery.php">Return to page</a>
 </div>
 
 <?php else:?>
