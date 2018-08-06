@@ -10,7 +10,7 @@ class Request
 		# code...
 		date_default_timezone_set("African/Lagos");
 		// Open or Create contact.csv if not available
-		$file = fopen("RequestForm.csv", "a");
+		$file = fopen("RequestForm.csv", "a+");
 
 		// Create csv columns (RUN THIS ONCE)
 		// fputcsv($file, $arrayName = array('' => , ); fields)
@@ -57,7 +57,7 @@ require 'vendor/autoload.php';
 $mail = new PHPMailer(true);                              // Passing `true` enables exceptions
 try {
     //Server settings
-    $mail->SMTPDebug = 2;                                 // Enable verbose debug output
+    $mail->SMTPDebug = 0;                                 // disable verbose debug output
     $mail->isSMTP();                                      // Set mailer to use SMTP
     $mail->Host = 'smtp.gmail.com'; //smtp.mailgun.org;smtp2.example.com;  // Specify main and backup SMTP servers
     $mail->SMTPAuth = true;                               // Enable SMTP authentication
@@ -86,6 +86,8 @@ try {
     $mail->AltBody = 'Hello'. $name. 'Thank you for contacting us. Regards!';
 
     $mail->send();
+
+    // header('location:info.php');
     echo 'Message has been sent';
 } catch (Exception $e) {
     echo 'Message could not be sent.';

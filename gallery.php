@@ -23,7 +23,27 @@
       <h1>Welcome!</h1>
     <h6>You are in our gallery! View the available movie and you can make a request. Below this page is a request form for you!</h6>
   </div>
-  
+   <!-- php simple if and else statement  -->
+
+<?php if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['state']) && isset($_POST['movieTitle'])):  ?>
+
+<?php
+    // IMPORT CLASS HERE
+include "class/Request.php";
+
+// EXECUTE WITH THE CUSTOM STATIC FUNCTION
+Request::process($_POST);
+
+?>
+
+<div class="formBack" align="center">
+  <h1>Thank you for making a request for your favourite movie!</h1>
+  <p>An email has been sent to the email address you supplied.</p>
+  <br>
+  <a href="">Return to page</a>
+</div>
+
+<?php else:?>
   <main id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
     <div>
       <ol class="carousel-indicators">
@@ -142,27 +162,7 @@
       </a>
 </section>
 </main>
-  <!-- php simple if and else statement  -->
-
-<?php if (isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['email']) && isset($_POST['state']) && isset($_POST['movieTitle'])):  ?>
-
-<?php
-    // IMPORT CLASS HERE
-include "class/Request.php";
-
-// EXECUTE WITH THE CUSTOM STATIC FUNCTION
-Request::process($_POST);
-
-?>
-
-<div class="formBack" align="center">
-  <h1>Thank you for making a request for your favourite movie!</h1>
-  <p>An email has been sent to the email address you supplied.</p>
-  <br>
-  <a href="">Return to page</a>
-</div>
-
-<?php else:?>
+ 
     <div class ="formBack"><h3>Make your request.</h3>
     <form action="gallery.php" method="POST" class="needs-validation">
       <div class="form-row">
