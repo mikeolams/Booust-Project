@@ -50,7 +50,7 @@
 include "class/SendUsEmail.php";
 
 // EXECUTE WITH THE CUSTOM STATIC FUNCTION
-SendUsEmail::processMail($_POST);
+SendUsEmail::processone($_POST);
 
 ?>
 
@@ -65,10 +65,10 @@ SendUsEmail::processMail($_POST);
         </button>
       </div>
       <div class="modal-body">
-        <form action="info.php" method="POST">
+        <form action="contact.php" method="POST">
           <div class="form-group">
-            <label for="validationTooltip04" >Recipient email:</label>
-            <input type="text" class="form-control" value="info@flamefilmes.com" id="recipient-name" required>
+            <label for="validationTooltip04" ></label>
+            <input type="text" hidden class="form-control" value="info@flamefilmes.com" id="recipient-name" required>
               <div id ="messageR"></div>
           </div>
           <div class="form-group">
@@ -83,7 +83,7 @@ SendUsEmail::processMail($_POST);
           </div>
           <div class="form-group">
             <label for="message-text" class="col-form-label">Message:</label>
-            <textarea class="form-control" name="message-text" id="message-text" placeholder="Your message.."></textarea>
+            <textarea class="form-control" name="message-text" id="message-text" placeholder="Your message.." required></textarea>
           </div>
           <div class="modal-footer">
             <!-- <input type="submit" value ="Submit"> -->
