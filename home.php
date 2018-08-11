@@ -1,3 +1,9 @@
+<?php 
+// Start the session
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,9 +18,18 @@
 
      <link href="css/bootstrap.css" rel="stylesheet">
 </head>
-<?php ?>
 
 <body>
+	<?php if (isset($_SESSION['userName']) ):  ?>
+	<div id= contact class="container">
+	<div align="right"><a href="login.php">Log Out</a></div>
+	<h2 align="center"> You are most welcome <?php echo $_SESSION['userName']; ?>!</h2>
+	</div>
+	<?php else:?>
+ <!-- <div class ="container" align="center">
+  <div align="right"><a href="login.php">Login</a></div>
+  <h1>My Movie</h1>
+</div>  -->
 	<header>
 		<div class = "headerTopic"><h1>The Flame FILM Rentals</h1><span><img width="50px" height="50px" src="images/imagesLogo.jpg"></span>
 		</div>
@@ -23,6 +38,7 @@
 		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 		    <span class="navbar-toggler-icon"></span>
 		  </button>
+		  
 		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
 		    <ul class="navbar-nav mr-auto">
 		      <li class="nav-item active">
@@ -51,6 +67,9 @@
 		      <li class="nav-item">
 		        <a class="nav-link" href="contact.php">Contact Us</a>
 		      </li>
+		      <li>
+		      	<a class="nav-link" href="login.php">Login</a>
+		  	  </li>
 		    </ul>
 		    <form id="form" class="form-inline my-2 my-lg-0">
 		      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -70,38 +89,6 @@
 				<!-- <div><h2>HOW WE CAN HELP YOU</h2>
 <p>We have the experience and capacity to meet the needs everyone. Take advantage of our vast experience in the movie Industry and we will help improve the connectivity, efficiency and security of your enttertament experience. We offer a no-strings-attached free Preliminary Audit to identify what you are like now and what we think you will be interested in the future.</p></div> -->
 			</section>
-			<!-- <div id="carouselExampleIndicators" class="carouselIndex slide" data-ride="carouselIndex">
-		      <ol class="carousel-indicators">
-		        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-		        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-		        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-		      </ol>	
-      		  <div class="container">
-      			<div id="carouselExampleFade" class="carouselIndex slide carousel-fade" data-ride="carousel">
-	  				<div class="carousel-innerIndex">
-					    <div class="carousel-itemIndex active">
-					      <img class="d-block w-100" src="images/images (17).jpg" alt="first slide">
-					    </div>
-					    <div class="carousel-itemIndex">
-					      <img class="d-block w-100" src="images/images (20).jpg" alt="second slide">
-					    </div>
-					</div>
-					<a class="carousel-control-prev" href="#carouselExampleFade" role="button" data-slide="prev">
-					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Previous</span>
-					</a>
-					<a class="carousel-control-next" href="#carouselExampleFade" role="button" data-slide="next">
-					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-					    <span class="sr-only">Next</span>
-					</a>
-				</div>
-    		  </div>
-    		</div> -->
-			<!-- <div>
-				<h2>ABOUT US</h2>
-				<p>The Flame Film was founded in 2005 in London by Michael, who after working 20 years in the film industry in several senior engineering roles decided to branch out independently in order to provide quality, customer-centered entertainment and later, rent and Managed Services. We have two other offices, one in Port harcourt, Abuja which was opened in 2008 and one in kwara, Osun which opened in April, 2016 to expand our services to Lagos.</p><nav>Flame FILM Rentals<span><img width="50px" height="50px" src="images/imageM5.jpg"></span>
-							</nav>
-			</div> -->
 			</div>	  
 		</div>
 	</header>
@@ -158,7 +145,7 @@
 		</div>
 	</footer>
 </div>
-
+<?php endif; ?>
 <script type="text/javascript" src = js/jquery.js></script>
 <script type="text/javascript" src = js/bootstrap.js></script>
 <script type="text/javascript">
@@ -167,7 +154,6 @@
 		$("#show").click (function(){ $(".form-inline").show();});
 
 </script>
-
 </body>
 </html>
 

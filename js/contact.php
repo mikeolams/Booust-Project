@@ -19,7 +19,7 @@
   </ol>
 </nav>
 <div id= contact class="container">
-	<h5>Hello! You may reach us as on any of the following details.</h4>
+	<h5>Hello! You may reach us as on any of the following details.</h5>
   <button id="showAddr" type="button" class="btn btn-primary btn-sm">Show Address</button>
   <button id="hideAddr" type="button" class="btn btn-primary btn-sm">Hide Address</button>
   <ul class ="address">
