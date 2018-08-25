@@ -34,13 +34,21 @@ if( isset($_POST['userName']) && isset($_POST['password'])) {
 
 try{
   //select all data
+<<<<<<< HEAD
   $query = "SELECT firstName FROM users WHERE userName=:userName AND password=:password";
+=======
+  $query = "SELECT name FROM users WHERE userName=:userName AND password=:password";
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
   $stmt = $connection->prepare($query);
 
   //bind the parameters
   $userName = $_POST['userName'];
+<<<<<<< HEAD
   // $password = hash("sha256", $_POST['password']);
   $password = $_POST['password'];
+=======
+  $password = hash("sha256", $_POST['password']);
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
   $stmt->bindParam(':userName',$userName);
   $stmt->bindParam(':password',$password);
   $stmt->execute();
@@ -49,7 +57,11 @@ try{
   $num = $stmt->rowCount();
 if($num>0){
   $row =$stmt->fetch();
+<<<<<<< HEAD
   $_SESSION['firstName'] =$row['firstName'];
+=======
+  $_SESSION['userName'] =$row['userName'];
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
   header("location:test.php");
   exit();
 }
@@ -66,7 +78,11 @@ catch(PDOException $exception){
 ?>
 
 <div id= contact class="container">
+<<<<<<< HEAD
 	<h2 align="center"> You are require to login with your details!</h2>
+=======
+	<h2 align="center"> You are most welcome!</h2>
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
 </div>
 
 
@@ -81,12 +97,20 @@ catch(PDOException $exception){
           <div class="form-group">
             <p>Please login here.</p>
             <label for="name" class="col-form-label">User Name:</label>
+<<<<<<< HEAD
             <input type="email" class="form-control" name="userName" placeholder="something@yourdomain" id="userName" required>
+=======
+            <input type="text" class="form-control" name="userName" placeholder="something@yourdomain" id="userName" required>
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
              <!-- <div id ="messageY"></div> -->
           </div>
           <div class="form-group">
             <label for="your-email" class="col-form-label">Your password:</label>
+<<<<<<< HEAD
             <input type="password" class="form-control" name="password" placeholder="password" id="password" required>
+=======
+            <input type="text" class="form-control" name="password" placeholder="password" id="password" required>
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
              <div id ="messageY"></div>
           </div>
           <div class="form-group">

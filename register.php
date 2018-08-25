@@ -7,7 +7,12 @@ session_start();
 //include database connection
 include 'config/database.php';
 
+<<<<<<< HEAD
 if( isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['userName']) && isset($_POST['password']) ){
+=======
+if( isset($_POST['firstName']) && isset($_POST['lastName']) && isset($_POST['userName']) && isset($_POST['password'])) {
+
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
 try{
   //inser all data
   $query = "INSERT INTO users SET firstName=:firstName, lastName=:lastName, userName=:userName, password=:password, created_at=:created_at";
@@ -19,6 +24,7 @@ try{
   $lastName = $_POST['lastName'];
   $userName = $_POST['userName'];
   $password = $_POST['password'];
+<<<<<<< HEAD
   // $password = hash(“256”, $_POST[‘password’]);
   $date = date("Y-m-d H:i:s");
   // $ssl = hash("ssl", $_POST[‘password’]);
@@ -33,6 +39,17 @@ try{
   $stmt->bindParam(':created_at', $date);
   // $stmt->bindParam(':ssl', $ssl);
 
+=======
+  $date = date("Y-m-d H:i:s");
+ 
+
+  //bind the parameters
+  $stmt->bindParam(':firstName',$userName);
+  $stmt->bindParam(':lastName',$userName);
+  $stmt->bindParam(':userName',$userName);
+  $stmt->bindParam(':password', $password);
+  $stmt->bindParam(':created_at', $date);
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
 
   //execute query
   if ($stmt->execute()){
@@ -77,7 +94,11 @@ catch(PDOException $exception){
   </ol>
 </nav>
 <div id= contact class="container">
+<<<<<<< HEAD
 	<h2 align="center"> Register!</h2>
+=======
+	<h2 align="center"> We are glad to add you to our users!</h2>
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
 </div>
 
 
@@ -102,12 +123,20 @@ catch(PDOException $exception){
           </div>
           <div class="form-group">
             <label for="name" class="col-form-label">Your Email:</label>
+<<<<<<< HEAD
             <input type="email" class="form-control" name="userName" placeholder="something@yourdomain" id="userName" required>
+=======
+            <input type="text" class="form-control" name="userName" placeholder="something@yourdomain" id="userName" required>
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
              <!-- <div id ="messageY"></div> -->
           </div>
           <div class="form-group">
             <label for="your-email" class="col-form-label">Your password:</label>
+<<<<<<< HEAD
             <input type="password" class="form-control" name="password" placeholder="password" id="password" required>
+=======
+            <input type="text" class="form-control" name="password" placeholder="password" id="password" required>
+>>>>>>> 12a525ed78a733a8ef5f794c4b1886fdda529c19
              <div id ="messageY"></div>
           </div>
           <div class="modal-footer">
