@@ -1,0 +1,169 @@
+/**{box-sizing: border-box;}*/
+    	/*#header{display: grid;
+  				grid-template-columns: auto auto auto;}*/
+    	/*body{margin: auto;
+    			background-color: yellow;}*/
+
+    	.headerTopic{ font-family: algerian, courier, monospace, monospace, Helvetica, sans-serif, serif;
+    					
+    					background-color: #BB8FCE;
+    					/*margin-top: inherit;*/
+    					padding-top: 0.1px; }
+    	.headerTopic, #copright {text-align: center;}
+
+/*.headerTopic { width: 0.7em;
+    font-size: 400%;
+    font-family: algerian, courier;
+    line-height: 80%;}*/
+
+
+    	content {	margin: 0 10px 10px 3px;}
+
+		/*.backGroundImage {background-image: url("images/background.jpg");
+							background-repeat: repeat;}*/
+
+    	.pText{width: 620px;}
+    	 .pText{ /*text-indent: 100px;*/
+				   /*margin: 50px 10px 10px 100px;*/
+				    padding-bottom: 200px;} 
+
+    div.col-xs-1 > div.imagebackground, .pText, div > ul.menuButton{margin-left: 6px;
+    		/*<div class="row">
+			<div class="col-xs-1 col-sm-2 col-lg-2">
+				<div class = "backGroundImage" >
+*/
+    													margin: 10px;}
+
+    	/*ul.menuButton li {display: inline;
+    						background-color: #F4ECF7;} */
+
+		ul > li:hover {background-color: #F1C40F/*#290*/;}
+
+				
+    	.footNote{ text-align: center;
+    					font-size: smaller;
+    					font-weight: bold;
+    					text-transform: capitalize;
+    					 }
+    	nav.footerImage + nav {padding: 8px 20px 1px 20px;}
+
+		.mastfoot {
+		    position: static;
+		    bottom: 0;
+		    width: 100%;
+		  }
+
+
+    	.footerImage{	padding: 1px 100px 1px 50px;
+						font: bold 20px sans-serif;
+				   		/* background: #f5d8f4;*/	
+						border: 2px solid orchid;
+						-webkit-animation: target 4s infinite; 
+						animation: target 6s infinite; }
+				
+		@keyframes target {
+				    		10% {border: 5px solid indigo;}
+									}
+
+.adverthead >nav {  width: 30%;
+					font-size: 100%;
+				    /*background-color: #Ffff;*/
+				    font-style: italic;
+				    }
+.advert >nav {  width:200px;
+				    background-color: #F4ECF7;
+				    }
+				    
+   	.adverthead {padding-top: 1px; color: yellow;}
+   	.advert{padding-top: 70px;}
+	
+
+	.adverthead, .advert >nav { 
+				    height: auto;
+				    font-weight: bold;
+				    position: relative;
+				    animation: mymove 5s infinite;}
+				    
+   	
+
+	#nava {animation-timing-function: linear;}
+	#navb {animation-timing-function: ease;}
+	#navc {animation-timing-function: ease-in;}
+	#navd {animation-timing-function: ease-out;}
+	#nave {animation-timing-function: ease-in-out;}
+
+			@keyframes mymove {
+							    from {left:10%;}
+							    to {left: 80%;}
+								}
+	/*.adverthead{ animation: mymove 5s infinite;}
+
+	@keyframes mymovetwo {
+    50% {font: 40px bold;}*/
+
+	/* CUSTOMIZE THE gallery page
+-------------------------------------------------- */
+.galleryPage, .carousel { margin: 10px;
+			   padding: 20px
+
+			}
+
+.carousel-inner {
+  height: 500px;
+  margin-bottom: 60px;
+padding: 2px 200px 2px 200px;
+background-color: #5a4c59; }
+
+.galleryPage>div.carousel>div.carousel-inner>div.carousel-item > img
+	{position: absolute;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 100%;
+padding-bottom: 10px;}
+
+ .galleryPage > div.carousel>div.carousel-inner>div.carousel-item
+  {height: 500px;
+  background-color: #777;}
+
+	/*contact list format*/
+  /*.noFormat:hover{ background-color:none }*/
+  form.needs-validation {padding:20px 100px 20px 100px;}
+  .formBack{background-color: white;}
+  .welcome{ font-weight: 900px }
+
+	/* CUSTOMIZE THE carosel on index page
+-------------------------------------------------- */
+ .carouselIndex { margin: 10px;
+			   padding: 20px
+
+			}
+
+.containerBackground {
+    height: 500px;
+  margin-bottom: 2px;
+padding: 2px 200px 2px 200px;
+background-color: #bf9413; }
+.backgroundcontent{display: flex;}
+
+
+ div.carouselIndex>div.carousel-innerIndex>div.carousel-itemIndex
+  {height: 100px;
+  background-color: #777;}
+
+
+  .imagebackground {
+  height: 100%;
+  margin: 6px;
+padding: 50%;
+background-color: #bf9413;}
+
+/*Login page*/
+
+/*.form {
+	padding: 0 20% 0 20%;
+	border: 20px solid blue;
+	margin: 20px;
+
+}*/
+ 
